@@ -3,7 +3,11 @@ import './About.scss'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faAngular,
+  faPython,
+  faBootstrap,
+  faSass,
+  faMdb,
+  faNodeJs,
   faCss3,
   faHtml5,
   faReact,
@@ -25,7 +29,7 @@ function About() {
 
   return (
     <>
-      <div className="container about-page">
+      <div className="about-page">
         <div className="text-zone">
           <h1>
             <AnimatedLetters
@@ -35,25 +39,28 @@ function About() {
             />
           </h1>
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
+            I'm a very ambitious full-stack developer looking for a role in an
             established IT company with the opportunity to work with the latest
             technologies on challenging and diverse projects.
           </p>
           <p>
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            To the right you can see the various tech skills I have and down
+            below are the different projects I have worked on.
           </p>
-          <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
-          </p>
+          <br />
+          <h1>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={'Projects'.split('')}
+              idx={15}
+            />
+          </h1>
         </div>
 
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
-              <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+              <FontAwesomeIcon icon={faNodeJs} color="#339933" />
             </div>
             <div className="face2">
               <FontAwesomeIcon icon={faHtml5} color="#F06529" />
@@ -69,6 +76,36 @@ function About() {
             </div>
             <div className="face6">
               <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+            </div>
+          </div>
+        </div>
+        <div className="stage-cube-cont2">
+          <div className="cubespinner2">
+            <div className="face7">
+              <FontAwesomeIcon icon={faMdb} color="#47A248" />
+            </div>
+            <div className="face8">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+                alt="VS Code Logo"
+                width="50"
+              />
+            </div>
+            <div className="face9">
+              <FontAwesomeIcon icon={faPython} color="#3377AB" />
+            </div>
+            <div className="face10">
+              <FontAwesomeIcon icon={faBootstrap} color="#7952B3" />
+            </div>
+            <div className="face11">
+              <FontAwesomeIcon icon={faSass} color="#CC6699" />
+            </div>
+            <div className="face12">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png"
+                alt="Express.js Logo"
+                width="50"
+              />
             </div>
           </div>
         </div>
