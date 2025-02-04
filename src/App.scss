@@ -1,0 +1,98 @@
+@use 'loaders.css/src/animations/pacman.scss';
+@use 'animate.css';
+
+$primary-color: #ffd700;
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/fonts/helvetica-neue.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LabelleAurore.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+input,
+textarea {
+  font-family: 'Helvetica Neue';
+}
+
+.loader-active {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
+}
+
+/* Tablet Styles (Screen width: 768px and below) */
+@media screen and (max-width: 768px) {
+  .text-zone {
+    width: 60%;
+    left: 5%;
+    top: 45%;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 42px;
+
+    &:before,
+    &:after {
+      font-size: 14px;
+    }
+  }
+
+  h2 {
+    font-size: 10px;
+  }
+
+  .flat-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile Styles (Screen width: 480px and below) */
+@media screen and (max-width: 480px) {
+  .text-zone {
+    width: 90%;
+    left: 5%;
+    top: 40%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 36px;
+
+    &:before,
+    &:after {
+      font-size: 12px;
+      margin-top: -30px;
+    }
+  }
+
+  h2 {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .flat-button {
+    font-size: 11px;
+    padding: 6px 12px;
+    letter-spacing: 2px;
+  }
+}
