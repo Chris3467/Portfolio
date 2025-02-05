@@ -29,7 +29,7 @@ function About() {
 
   return (
     <>
-      <div className="about-page">
+      <div className="con2 about-page">
         <div className="text-zone">
           <h1>
             <AnimatedLetters

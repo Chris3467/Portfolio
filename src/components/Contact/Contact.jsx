@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import './Contact.scss'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
+import Logo from '../Home/Logo/Logo'
 import emailjs from '@emailjs/browser'
 
 function Contact() {
@@ -15,22 +16,6 @@ function Contact() {
     return () => clearTimeout(timeoutId)
   }, [])
 
-  //   const sendEmail = (e) => {
-  //     e.preventDefault()
-
-  //     emailjs
-  //       .sendForm('service_ewvgyh9', 'template_e8a6ped', form.current, {
-  //         publicKey: '0a3pEGZJpzea2quDV',
-  //       })
-  //       .then(
-  //         () => {
-  //           console.log('SUCCESS!')
-  //         },
-  //         (error) => {
-  //           console.log('FAILED...', error.text)
-  //         }
-  //       )
-  //   }
   const sendEmail = (e) => {
     e.preventDefault()
 
@@ -44,7 +29,7 @@ function Contact() {
       .then(
         () => {
           alert('Message successfully sent!')
-          window.location.reload(false)
+          //window.location.reload(false)
         },
         () => {
           alert('Failed to send the message, please try again')
@@ -72,12 +57,17 @@ function Contact() {
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="from_name"
+                    placeholder="Name"
+                    required
+                  />
                 </li>
                 <li className="half">
                   <input
                     type="email"
-                    name="email"
+                    name="from_email"
                     placeholder="Email"
                     required
                   />
@@ -100,6 +90,7 @@ function Contact() {
             </form>
           </div>
         </div>
+        <Logo />
       </div>
       <Loader type="pacman" />
     </>
