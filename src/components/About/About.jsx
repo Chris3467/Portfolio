@@ -15,6 +15,7 @@ import {
   faGitAlt,
 } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
+import Project from '../Projects/Project'
 
 function About() {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -55,6 +56,7 @@ function About() {
               idx={15}
             />
           </h1>
+          <Project />
         </div>
 
         <div className="stage-cube-cont">

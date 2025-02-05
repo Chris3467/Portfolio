@@ -1,0 +1,28 @@
+.project-container {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .projects {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(109, 41, 41);
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    background-size: 100% 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+  }
+}
