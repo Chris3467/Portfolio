@@ -5,7 +5,7 @@ function Project() {
     <div className="project-container">
       <div className="projects">
         <a href="https://chesstactix.netlify.app/">Chesstactix</a>
-        <p>Coming Soon...</p>
+        <a href="https://triviaverse2.netlify.app/">TriviaVerse</a>
         <p>Coming Soon...</p>
       </div>
     </div>
